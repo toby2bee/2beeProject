@@ -12,3 +12,13 @@ rm -rf CloudWatchMonitoringScripts-1.2.2.zip
 #   /home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --verify --verbose
 #   /home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail
 #   */1 * * * * root /home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail
+
+***********From the terminal using ssh************
+ensure to create iam role for the ec2 for cloudwatch monitoring
+sudo su
+chmod 400 keypair.pem >> sometimes not neccesary
+ssh into the instance
+from home cd into the dir created tru the batch script
+
+cd /etc
+vi crontab
